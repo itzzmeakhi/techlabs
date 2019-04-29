@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title> TR1 AR - Book </title>
+        <meta name="viewport" content="width=device-width,height=device-height">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+     
+        <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+        <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.5/aframe/build/aframe-ar.js"></script>
+        <script>
+            
+            // Gyan Video Handler
+            
+            AFRAME.registerComponent('gyan-vidhandler', {
+                init: function() {
+                    this.toggle = false;
+                    this.vid = document.querySelector("#gyan");
+                    this.vid.pause();
+                },
+                tick: function() {
+                    if (this.el.object3D.visible == true) {
+                        if (!this.toggle) {
+                            this.toggle = true;
+                            this.vid.play();
+                        }
+                    } else {
+                        this.toggle = false;
+                        this.vid.pause();
+                    }
+                }
+            });
+            
+            // Vigyan Video Handler
+            
+            AFRAME.registerComponent('vigyan-vidhandler', {
+                init: function() {
+                    this.toggle = false;
+                    this.vid = document.querySelector("#vigyan");
+                    this.vid.pause();
+                },
+                tick: function() {
+                    if (this.el.object3D.visible == true) {
+                        if (!this.toggle) {
+                            this.toggle = true;
+                            this.vid.play();
+                        }
+                    } else {
+                        this.toggle = false;
+                        this.vid.pause();
+                    }
+                }
+            });
+            
+            // Fun Video Handler
+            
+            AFRAME.registerComponent('fun-vidhandler', {
+                init: function() {
+                    this.toggle = false;
+                    this.vid = document.querySelector("#fun");
+                    this.vid.pause();
+                },
+                tick: function() {
+                    if (this.el.object3D.visible == true) {
+                        if (!this.toggle) {
+                            this.toggle = true;
+                            this.vid.play();
+                        }
+                    } else {
+                        this.toggle = false;
+                        this.vid.pause();
+                    }
+                }
+            });
+            
+            // Alice Video Handler
+            
+            AFRAME.registerComponent('alice-vidhandler', {
+                init: function() {
+                    this.toggle = false;
+                    this.vid = document.querySelector("#alice");
+                    this.vid.pause();
+                },
+                tick: function() {
+                    if (this.el.object3D.visible == true) {
+                        if (!this.toggle) {
+                            this.toggle = true;
+                            this.vid.play();
+                        }
+                    } else {
+                        this.toggle = false;
+                        this.vid.pause();
+                    }
+                }
+            });
+            
+            // Text Extraction Video Handler
+            
+            AFRAME.registerComponent('text-vidhandler', {
+                init: function() {
+                    this.toggle = false;
+                    this.vid = document.querySelector("#text");
+                    this.vid.pause();
+                },
+                tick: function() {
+                    if (this.el.object3D.visible == true) {
+                        if (!this.toggle) {
+                            this.toggle = true;
+                            this.vid.play();
+                        }
+                    } else {
+                        this.toggle = false;
+                        this.vid.pause();
+                    }
+                }
+            });
+            
+            // Alexa Video Handler
+            
+            AFRAME.registerComponent('alexa-vidhandler', {
+                init: function() {
+                    this.toggle = false;
+                    this.vid = document.querySelector("#alexa");
+                    this.vid.pause();
+                },
+                tick: function() {
+                    if (this.el.object3D.visible == true) {
+                        if (!this.toggle) {
+                            this.toggle = true;
+                            this.vid.play();
+                        }
+                    } else {
+                        this.toggle = false;
+                        this.vid.pause();
+                    }
+                }
+            });
+            
+            // Google Video Handler
+            
+            AFRAME.registerComponent('google-vidhandler', {
+                init: function() {
+                    this.toggle = false;
+                    this.vid = document.querySelector("#google");
+                    this.vid.pause();
+                },
+                tick: function() {
+                    if (this.el.object3D.visible == true) {
+                        if (!this.toggle) {
+                            this.toggle = true;
+                            this.vid.play();
+                        }
+                    } else {
+                        this.toggle = false;
+                        this.vid.pause();
+                    }
+                }
+            });
+            
+            // Bugs Video Handler
+            
+            AFRAME.registerComponent('bugs-vidhandler', {
+                init: function() {
+                    this.toggle = false;
+                    this.vid = document.querySelector("#bugs");
+                    this.vid.pause();
+                },
+                tick: function() {
+                    if (this.el.object3D.visible == true) {
+                        if (!this.toggle) {
+                            this.toggle = true;
+                            this.vid.play();
+                        }
+                    } else {
+                        this.toggle = false;
+                        this.vid.pause();
+                    }
+                }
+            });
+            
+            
+          
+            
+        </script>
+    </head>
+    <body>
+
+        <a-scene id="scene" arjs='trackingMethod: best; debugUIEnabled: false;' vr-mode-ui="enabled: false" ar-template >
+            
+            <a-assets>
+
+                <!-- Gyan Video -->
+                
+                <video preload="none" id="gyan" response-type="arraybuffer" loop="false" crossorigin webkit-playsinline playsinline controls>
+                    <source  src="videos/gyan.mp4">
+                </video>
+                
+                <!-- Vigyan Video -->
+                
+                <video preload="none" id="vigyan" response-type="arraybuffer" loop="false" crossorigin webkit-playsinline playsinline controls>
+                    <source  src="videos/vigyan.mp4">
+                </video>
+                
+                <!-- Fun Video -->
+                
+                <video preload="none" id="fun" response-type="arraybuffer" loop="false" crossorigin webkit-playsinline playsinline controls>
+                    <source  src="videos/fun.mp4">
+                </video>
+                
+                <!-- Alice Video -->
+                
+                <video preload="none" id="alice" response-type="arraybuffer" loop="false" crossorigin webkit-playsinline playsinline controls>
+                    <source  src="videos/alice.mp4">
+                </video>
+                
+                <!-- Text Extraction Video -->
+                
+                <video preload="none" id="text" response-type="arraybuffer" loop="false" crossorigin webkit-playsinline playsinline controls>
+                    <source  src="videos/text.mp4">
+                </video>
+                
+                <!-- Alexa Video -->
+                
+                <video preload="none" id="alexa" response-type="arraybuffer" loop="false" crossorigin webkit-playsinline playsinline controls>
+                    <source  src="videos/alexa.mp4">
+                </video>
+                
+                <!-- Google Video -->
+                
+                <video preload="none" id="google" response-type="arraybuffer" loop="false" crossorigin webkit-playsinline playsinline controls>
+                    <source  src="videos/googlehome.mp4">
+                </video>
+                
+                <!-- Bugs Video -->
+                
+                <video preload="none" id="bugs" response-type="arraybuffer" loop="false" crossorigin webkit-playsinline playsinline controls>
+                    <source  src="videos/bugs.mp4">
+                </video>
+                
+               
+
+            </a-assets>
+            
+            <!-- Gyan Marker -->
+
+            <a-marker id="marker1" type='pattern' url='markers/gyan-pattern-marker.patt' gyan-vidhandler>
+                <!--<a-box position='0 0 0' material='color: red;'></a-box>-->
+                <a-plane scale = "4 2" position='0 0.1 0' rotation="-90 0 0" material='transparent:true;src:#gyan' controls></a-plane>
+                <!--<a-entity text="font: https://cdn.aframe.io/fonts/mozillavr.fnt; value: Gyan"></a-entity>-->
+            </a-marker>
+            
+            <!-- Vigyan Marker -->
+
+            <a-marker id="marker2" type='pattern' url='markers/vigyan-pattern-marker.patt' vigyan-vidhandler>
+                <!--<a-box position='0 0 0' material='color: red;'></a-box>-->
+                <a-plane scale = "4 2" position='0 0.1 0' rotation="-90 0 0" material='transparent:true;src:#vigyan' controls></a-plane>
+                <!--<a-entity text="font: https://cdn.aframe.io/fonts/mozillavr.fnt; value: Vigyan"></a-entity>-->
+            </a-marker>
+            
+            <!-- Fun Marker -->
+
+            <a-marker id="marker3" type='pattern' url='markers/fun-pattern-marker.patt' fun-vidhandler>
+                <!--<a-box position='0 0 0' material='color: red;'></a-box>-->
+                <a-plane scale = "4 2" position='0 0.1 0' rotation="-90 0 0" material='transparent:true;src:#fun' controls></a-plane>
+                <!--<a-entity text="font: https://cdn.aframe.io/fonts/mozillavr.fnt; value: Fun Moments"></a-entity>-->
+            </a-marker>
+            
+            <!-- Alice Marker -->
+
+            <a-marker id="marker4" type='pattern' url='markers/alice-pattern-marker.patt' alice-vidhandler>
+                <!--<a-box position='0 0 0' material='color: red;'></a-box>-->
+                <a-plane scale = "4 2" position='0 0.1 0' rotation="-90 0 0" material='transparent:true;src:#alice' controls></a-plane>
+                <!--<a-entity text="font: https://cdn.aframe.io/fonts/mozillavr.fnt; value: Alice"></a-entity>-->
+            </a-marker>
+            
+            <!-- Text Extraction Marker -->
+
+            <a-marker id="marker5" type='pattern' url='markers/textext-pattern-marker.patt' text-vidhandler>
+                <!--<a-box position='0 0 0' material='color: red;'></a-box>-->
+                <a-plane scale = "4 2" position='0 0.1 0' rotation="-90 0 0" material='transparent:true;src:#text' controls></a-plane>
+                <!--<a-entity text="font: https://cdn.aframe.io/fonts/mozillavr.fnt; value: Text Extraction"></a-entity>-->
+            </a-marker>
+            
+            <!-- Alexa Marker -->
+
+            <a-marker id="marker6" type='pattern' url='markers/alexa-pattern-marker.patt' alexa-vidhandler>
+                <!--<a-box position='0 0 0' material='color: red;'></a-box>-->
+                <a-plane scale = "4 2" position='0 0.1 0' rotation="-90 0 0" material='transparent:true;src:#alexa' controls></a-plane>
+                <!--<a-entity text="font: https://cdn.aframe.io/fonts/mozillavr.fnt; value: Alexa"></a-entity>-->
+            </a-marker>
+            
+            <!-- Google Marker -->
+
+            <a-marker id="marker7" type='pattern' url='markers/google-pattern-marker.patt' google-vidhandler>
+                <!--<a-box position='0 0 0' material='color: red;'></a-box>-->
+                <a-plane scale = "4 2" position='0 0.1 0' rotation="-90 0 0" material='transparent:true;src:#google' controls></a-plane>
+                <!--<a-entity text="font: https://cdn.aframe.io/fonts/mozillavr.fnt; value: Google Home"></a-entity>-->
+            </a-marker>
+            
+            <!-- Bugs Marker -->
+
+            <a-marker id="marker8" type='pattern' url='markers/mvpbugs-pattern-marker.patt' bugs-vidhandler>
+                <!--<a-box position='0 0 0' material='color: red;'></a-box>-->
+                <a-plane scale = "4 2" position='0 0.1 0' rotation="-90 0 0" material='transparent:true;src:#bugs' controls></a-plane>
+                <!--<a-entity text="font: https://cdn.aframe.io/fonts/mozillavr.fnt; value: Bugs"></a-entity>-->
+            </a-marker>
+            
+           
+        
+            
+            
+            <!-- Camera -->
+
+            <a-entity camera></a-entity>
+
+
+
+
+
+    </body>
+</html>
